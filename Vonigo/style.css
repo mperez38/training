@@ -7,6 +7,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   font-weight: 300;
 }
 
+@font-face {
+  font-family: 'manu-font';
+  src: url ('OpenSans-Light.ttf');
+  font-weight: 200;
+}
+
 body {
   font-family: 'manu-font', serif, arial , sans-serif;
   padding:0px;
@@ -49,12 +55,42 @@ header{
 }
 
 input{ 
-	height: 25px; 
-	width: 330px;
+	height: 31px; 
+	width: 336px;
 	background-color:#f7f7f7;
 	border:0px;
-	padding: 3px;
 	border-radius:3px;
+	padding: 3px 10px;
+	box-sizing: border-box;
+}
+
+.image-submit{
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	margin-top: 7px;
+	margin-left: 6px;
+}
+
+.image-arrow-submit{
+	vertical-align: middle;
+	width: 12px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	margin-top: 7px;
+}
+
+.image-arrow-left-submit{
+	vertical-align: middle;
+	width: 12px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+	margin-top: 7px;
+	margin-left: 3px;
 }
 
 .lupa{
@@ -89,6 +125,7 @@ input{
 
 .create-new img{
 	margin-left: 9px;
+	margin-bottom: -2px;
 }
 
 .create-new a{
@@ -131,11 +168,12 @@ a{
 
 .menu{
 	display:inline-block;
-	height: calc(100% - 67px);
+	height: calc(100% - 66px);
 	width: 200px;
 	background-color: #2a2d31;
 	position: fixed;
 	left: 0;
+	bottom: 0;
 	margin-top: 66px;
 }
 
@@ -374,12 +412,33 @@ footer a{
 	color: #616265;
 }
 
+.content-info input{
+	background-color: white !important;
+	height: 25px; 
+	width: 330px;
+	border:0px;
+	padding: 3px 10px;
+	border-radius:3px;
+	box-sizing: border-box;
+	border: 1px solid #dcdcdc !important;
+	margin-left: 20px;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+.input-jhon{
+	border: 1px solid #dcdcdc;
+	border-top: 0;
+}
+
 .article p{
 	font-size: 3em;
+	font-weight: 200;
 }
 
 .article a, li{
 	font-size: 1ex;
+	color: #2a2d30;
 }
 
 .article img{
@@ -443,7 +502,7 @@ footer a{
 	font-size: 12px;
 }
 
-.james{
+.usuario{
 	background-color:white;
 	width: 365px;
 	border-top:1px solid #e4e4e4; 
@@ -452,35 +511,42 @@ footer a{
 	margin-top: 20px;
 }
 
-.james p{
+.usuario p{
 	text-align: justify;
-	padding: 20px;
+	padding: 10px 20px;
 	font-size: 10px;
 	color: #9f9fa0;
 	line-height: 1.5em;
 }
 
-.james span{
-	float: right;
+.usuario span{
+	padding-top: 8px;
+	padding-left: 11px;
 	margin-right: 224px;
 	margin-top: -19px;
 	font-size: 1ex;
 	color: #808080;
 }
 
-.james img{
+.usuario img{
+	float: left;
 	vertical-align: middle;
 	margin-left: 20px;
 	margin-top: 20px;
 }
 
-.name-james{
+.name-usuario{
+	overflow: hidden;
+}
+
+.name-usuario p{
 	color: black !important;
 	margin-top: -12px;
 	vertical-align: middle;
 	display: inline-block;
 	font-size: 13px;
-	padding: 20px 20px 0 20px !important;
+	padding:  45px 0 0 0 !important;
+	margin-left: 13px;
 }
 
 .box-coments-james{
@@ -504,7 +570,7 @@ footer a{
 	color: #696a6c;
 }
 
-.coments-alec p{
+.coments-usu p{
 	display: inline-block;
 	font-size: 12px;
 	vertical-align: top;
@@ -521,25 +587,11 @@ footer a{
 	line-height: 1.5em;
 }
 
-.coments-alec img{
+.coments-usu img{
 	vertical-align: middle;
 	margin-top: 10px;
 	margin-left: 20px;
 	margin-right: 10px;
-}
-
-.coments-alec input{
-	height: 25px; 
-	width: 330px;
-	background-color:white;
-	border:0px;
-	padding: 3px 10px;
-	border-radius:3px;
-	box-sizing: border-box;
-	border: 1px solid #dcdcdc;
-	margin-left: 20px;
-	margin-top:10px;
-	margin-bottom: 10px;
 }
 
 .info-right{
@@ -551,46 +603,6 @@ footer a{
 .title-info-right p{
 	font-size: 12px;
 	display: inline-block;
-}
-
-.lynette{
-	background-color:white;
-	width: 365px;
-	border-top:1px solid #e4e4e4; 
-	border-left:1px solid #e4e4e4;
-	border-right: 1px solid #e4e4e4;
-	margin-top: 20px;
-}
-
-.lynette p{
-	text-align: justify;
-	padding: 10px 20px;
-	font-size: 10px;
-	color: #9f9fa0;
-	line-height: 1.5em;
-}
-
-.lynette span{
-	float: right;
-	margin-right: 224px;
-	margin-top: -19px;
-	font-size: 1ex;
-	color: #808080;
-}
-
-.lynette img{
-	vertical-align: middle;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-.name-lynette{
-	color: black !important;
-	margin-top: -12px;
-	vertical-align: middle;
-	display: inline-block;
-	font-size: 13px;
-	padding: 20px 20px 0 20px !important;
 }
 
 .clic{
@@ -626,7 +638,7 @@ footer a{
 	color: black !important;
 }
 
-.hours-coments-alec{
+.hours-coments-usu{
 	color: gray;
 	font-size: 10px;
 	vertical-align: top;
@@ -642,10 +654,13 @@ footer a{
 }
 
 textarea{
-	width: 278px;
-	height: 100px;
+	width: 284px;
+	height: 106px;
 	border-radius: 4px;
 	border: 1px solid gray;
+	resize: none;
+	padding: 5px;
+	box-sizing: border-box;
 }
 
 .textarea ul{
@@ -686,122 +701,8 @@ textarea{
 	margin-bottom: 15px;
 }
 
-.jhon{
-	background-color:white;
-	width: 365px;
-	border-top:1px solid #e4e4e4; 
-	border-left:1px solid #e4e4e4;
-	border-right: 1px solid #e4e4e4;
-	margin-top: 20px;
-}
-
-.jhon p{
-	text-align: justify;
-	padding: 20px;
-	font-size: 10px;
-	color: #9f9fa0;
-	line-height: 1.5em;
-}
-
-.jhon span{
-	float: right;
-	margin-right: 224px;
-	margin-top: -19px;
-	font-size: 1ex;
-	color: #808080;
-}
-
-.jhon img{
-	vertical-align: middle;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-.name-jhon{
-	color: black !important;
-	margin-top: -12px;
-	vertical-align: middle;
-	display: inline-block;
-	font-size: 13px;
-	padding: 20px 20px 0 20px !important;
-}
-
-.input-jhon{
-	background-color: #f7f7f7;
-	border:1px solid #e4e4e4;
-}
-
-.input-jhon input{
-	height: 25px; 
-	width: 330px;
-	background-color:white;
-	border:0px;
-	padding: 3px 10px;
-	border-radius:3px;
-	box-sizing: border-box;
-	border: 1px solid #dcdcdc;
-	margin-left: 20px;
-	margin-top:10px;
-	margin-bottom: 10px;
-}
-
-.eva{
-	background-color:white;
-	width: 365px;
-	border-top:1px solid #e4e4e4; 
-	border-left:1px solid #e4e4e4;
-	border-right: 1px solid #e4e4e4;
-	margin-top: 20px;
-}
-
-.eva p{
-	text-align: justify;
-	padding: 20px;
-	font-size: 10px;
-	color: #9f9fa0;
-	line-height: 1.5em;
-}
-
-.eva span{
-	float: right;
-	margin-right: 224px;
-	margin-top: -19px;
-	font-size: 1ex;
-	color: #808080;
-}
-
-.eva img{
-	vertical-align: middle;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-.name-eva{
-	color: black !important;
-	margin-top: -12px;
-	vertical-align: middle;
-	display: inline-block;
-	font-size: 13px;
-	padding: 20px 20px 0 20px !important;
-}
-
-.box-eva input{
-	height: 25px; 
-	width: 330px;
-	background-color:white;
-	border:0px;
-	padding: 3px 10px;
-	border-radius:3px;
-	box-sizing: border-box;
-	border: 1px solid #dcdcdc;
-	margin-left: 20px;
-	margin-top:10px;
-	margin-bottom: 10px;
-}
-
 .box-more-comment{
 	border-bottom:1px solid #e4e4e4; 
 	border-left:1px solid #e4e4e4;
 	border-right: 1px solid #e4e4e4;
 }
-
