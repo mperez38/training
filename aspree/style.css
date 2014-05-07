@@ -71,17 +71,26 @@ body {
 	border-bottom: 5px solid transparent;*/	
 }
 
-/*
+
 .task-wrapper{
-	display: none;
+	text-align: center;
 	width: 300px;
-	height: 50px;
+	height: 87px;
 	background-color: #57ade1;
 }
 
-.task-wrapper li{
+.task-wrapper ul{
 	display: inline-block;
+}
+
+.task-wrapper a{
+	color: white !important;
 	padding: 10px;
+}
+
+.task-wrapper li{
+	vertical-align: middle;
+	display: inline-block;
 }
 
 .button-menu ul>li> a:hover + .task-wrapper {
@@ -89,7 +98,7 @@ body {
 	position: relative;
 	display: inline-block;
 	margin-left: 20px;
-}*/
+}
 
 /* Header Style */
 .fixed-header{
@@ -129,6 +138,29 @@ header{
 	margin: 0 10px;
 }
 
+.paris{
+	display: inline-block;
+	background-image: url('images/image-paris.png');
+	width: 822px;
+	height: 181px;
+	vertical-align: top;
+	margin-right: -4px;
+}
+
+.paris p{
+	font-size: 14px;
+	color: #FFF;
+	float: left;
+	margin-left: 9px;
+	margin-top: 25px;
+}
+
+.paris img{
+	float: left;
+	margin-left: 15px!important;
+	margin-top: 21px;
+}
+
 .images-portada{
 	margin-top: -2px;
 	float: left;
@@ -144,6 +176,7 @@ header{
 
 /* Content Style */
 .content{
+	min-width: 1129px;
 	margin-left: 151px;
 	margin-top: 256px;
 	background-color: #e9eef1
@@ -153,13 +186,25 @@ header{
 	display: inline-block;
 }
 
+.content-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
 .mail{
 	border: 1px solid #e9eef1;
-	width: 384px;
+	width: 370px;
 	background-color: white;
 	border-radius: 4px;
 	margin: 15px;
 	display: inline-block;
+}
+
+.name-mail{
+	display: inline-block;
+	margin-top: 10px;
+	color: #f55155;
+	font-size: 19px;
 }
 
 .title-mail{
@@ -184,7 +229,7 @@ header{
 .usuario p{
 	font-size: 13px;
 	color: #5a5a5a;
-	padding: 11px 37px;
+	padding: 19px 37px;
 	line-height: 1.5em;
 }
 
@@ -227,11 +272,18 @@ header{
 /* Notes Style */
 .notes{
 	border: 1px solid #e9eef1;
-	width: 384px;
+	width: 370px;
 	background-color: white;
 	border-radius: 4px;
 	margin: 15px;
 	margin-top: 0px;
+}
+
+.name-notes{
+	display: inline-block;
+	margin-top: 10px;
+	color: #c664e4;
+	font-size: 19px;
 }
 
 .title-notes{
@@ -251,7 +303,7 @@ header{
 
 .plus-notes{
 	float: right;
-	margin-left: 10px;
+	margin-right: 10px;
 	margin-top: 10px;
 }
 
@@ -260,7 +312,7 @@ header{
 }
 
 .stories p, .work p, .food p{
-	padding: 14px;
+	padding: 17px 14px;
 	color: #878787;
 	font-size: 12px;
 }
@@ -287,6 +339,290 @@ header{
 	margin-top: 8px;
 	font-size: 11px;
 	color: white;
+}
+
+/* Calendar Style */
+.calendar{
+	margin: 18px 18px 18px 0;
+	width: 705px;
+	height: 412px;
+	background-color:white;
+	border-radius: 4px;
+}
+
+.name-calendar{
+	display: inline-block;
+	margin-top: 20px;
+	color: #eb9f37;
+	font-size: 19px;
+}
+
+.title-calendar{
+	text-align: center;
+	margin-bottom: 21px;
+}
+
+.img-title{
+	margin-top: 20px;
+}
+
+.plus-calendar{
+	float: right;
+	padding: 20px;
+}
+
+.box-months{
+	padding: 20px;
+	text-align: center;
+	float: left;
+	width: 140px;
+}
+
+.left-month{
+	float: left;
+	margin-top: 2px;
+}
+
+.right-month{
+	float: right;
+	margin-top: -13px;
+}
+
+.list-notifications{
+	margin-top: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.list-notifications ul{
+	padding-left: 35px;
+	margin-top: 20px;
+}
+
+..list-notifications li{
+	margin-bottom: 5px;
+}
+
+.list-notifications span, .gray{
+	color: #b8b8b8;
+}
+
+.list-notifications span{
+	font-size: 10px;
+	margin-left: 35px;
+	margin-bottom: 10px;
+}
+
+.list-notifications a{
+	text-decoration: none;
+	color: #787878;
+	font-size: 13px;
+}
+
+.point-cian { 
+	list-style-image: url("images/point-cian.png"); 
+}
+
+ul.point-pink { 
+	list-style-image: url("images/point-pink.png"); 
+}
+
+ul.point-blue { 
+	list-style-image: url("images/point-blue.png"); 
+}
+
+ul.point-orange { 
+	list-style-image: url("images/point-orange.png"); 
+}
+
+.table-calendar{
+	width: 525px;
+	height: 340px;
+	display: inline-block;
+	float: right;
+}
+
+table{
+	width: 100%;
+}
+
+table td:hover{
+	background-color: #fffeee;
+}
+
+td{
+	padding: 17px 27px;
+}
+
+tbody td{
+	border-top: 1px solid #f2f2f2;
+}
+
+tbody tr{
+	border-left: 1px solid #f2f2f2;
+	border-right:1px solid #f2f2f2;
+}
+
+thead td{
+	color: #bfbfbf;
+	font-size: 12px;
+}
+
+/* Contact Style */
+.contacts{
+	width: 350px;
+	background-color: white;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+.name-contacts{
+	display: inline-block;
+	margin-top: 10px;
+	color: #89bb3c;
+	font-size: 19px;
+}
+
+.title-contacts{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.title-contacts img{
+	margin-top: 10px;
+}
+
+.lupa-contacts{
+	float: left;
+	margin-left: 10px;
+}
+
+.plus-contacts{
+	float: right;
+	margin-right: 10px;
+}
+
+.contact{
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.contact img{
+	margin-left: 20px;
+	float: left;
+}
+
+.info-contact{
+	overflow: hidden;
+	margin-left: 70px;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.info-contact p{
+	font-size: 13px;
+}
+
+.info-contact span{
+	color: #b8b8b8;
+	font-size: 12px;
+}
+
+/* Weather Style */
+.weather{
+	height: 220px;
+	vertical-align: top;
+	margin: 0 15px 15px 15px;
+	width: 339px;
+	background-image: url('images/image-azul.jpg');
+	background-size: 350px 220px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.name-weather{
+	display: inline-block;
+	margin-top: 13px;
+	color: white;
+	font-size: 19px;
+}
+
+.title-weather{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.title-weather img{
+	margin-top: 10px;
+}
+
+.plus-weather{
+	float: right;
+	margin-right: 10px;
+}
+
+.arrow-left-weather{
+	float: left;
+	margin-left: 10px;
+	margin-top: 7px
+}
+
+.arrow-left-weather img{
+	width: 8px;
+	height: 13px;
+}
+
+.arrow-right-weather{
+	float: left;
+	margin-left: 20px;
+	margin-top: 7px
+}
+
+.info-weather{
+	display: inline-block;
+	margin-left: 10px;
+	line-height: 1em;
+}
+
+.info-weather span{
+	color: white;
+	font-size: 18px;
+}
+
+.info-weather p{
+	color: white;
+	font-size: 12px;
+}
+
+.temp{
+	float: right;
+	margin-right: 10px;
+}
+
+.temp p{
+	display: inline-block;
+	font-size: 40px;
+	color: white;
+	vertical-align: top;
+}
+
+.temp ul{
+	margin-left: 28px;
+	font-size: 12px;
+}
+
+.temp li{
+	display: inline-block;
+}
+
+.temp a{
+	text-decoration: none;
+	color: white;
+}
+
+.temp img{
+	margin-bottom: 20px;
 }
 
 
