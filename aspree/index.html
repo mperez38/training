@@ -5,8 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Aspree</title>
 </head>
-<body>
 
+<body>
 	<div class="menu">
 		<div class="scroll-menu">
 			<div class="img-usuario">
@@ -32,8 +32,8 @@
 			<div class="button-menu">
 				<ul>
 					<li>
-						<a href=""><img src="images/tasks.png">Tasks</a>
-
+						<img class="arrow-blue" src="images/arrow-blue.png">
+						<a class="open" href=""><img src="images/tasks.png">Tasks</a>
 						<ul class="task-wrapper">
 							<li>
 								<a href=""><img src="images/new-tasks.png">New Tasks</a>
@@ -181,7 +181,7 @@
 							<tr>
 								<td>Sun</td>
 								<td>Mon</td>
-								<td>Tue</td>
+								<td class="active-day">Tue</td>
 								<td>Wed</td>
 								<td>Thu</td>
 								<td>Fri</td>
@@ -205,7 +205,33 @@
 								<td>8</td>
 								<td>9</td>
 								<td>10</td>
-								<td>11</td>
+								<td class="relative-td">11
+									<div class="point-notifications">
+										<span>
+											<img class="arrow-noti-pink" src="images/arrow-noti.png">
+											<a class="open-noti-pink" href=""><img src="images/point-pink.png">
+												<div class="alert-noti-pink">
+													<p>Meeting Tim</p>
+													<div class="square-noti-pink square-off"></div>
+													<span>Notes</span>
+													<span>Alert</span>
+												</div>
+											</a>
+										</span>
+
+										<span>
+											<img class="arrow-noti-cian" src="images/arrow-noti.png">
+											<a class="open-noti-cian" href=""><img src="images/point-cian.png">
+												<div class="alert-noti-cian">
+													<p>Dinner with her</p>
+													<div class="square-noti-cian square-off"></div>
+													<span>Notes</span>
+													<span>Alert</span>
+												</div>
+											</a>
+										</span>
+									</div>	
+								</td>
 							</tr>
 							<tr>
 								<td>12</td>
@@ -230,7 +256,19 @@
 								<td>27</td>
 								<td>28</td>
 								<td>29</td>
-								<td>30</td>
+								<td class="relative-td">30
+									<div class="point-notifications">
+										<img class="arrow-noti-orange" src="images/arrow-noti.png">
+										<a class="open-noti-orange" href=""><img src="images/point-orange.png">
+											<div class="alert-noti-orange">
+												<p>Joining Conference</p>
+												<div class="square-noti-orange square-off"></div>
+												<span>Notes</span>
+												<span>Alert</span>
+											</div>
+										</a>
+									</div>
+								</td>
 								<td>31</td>
 								<td class="gray">1</td>
 							</tr>
@@ -301,5 +339,29 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		$(".open").click(function(event) {
+			event.preventDefault();
+			$('.task-wrapper').toggleClass('on');
+			$('.arrow-blue').toggleClass('on');
+		});
+
+		$(".point-notifications a").click(function(event){
+			event.preventDefault();
+			$(".point-notifications a div").removeClass("on");
+			$(".point-notifications a").siblings("img").removeClass("on");
+
+			$(this).children("div").addClass("on");
+			$(this).siblings("img").addClass("on");
+		});
+	
+		//$('.square-off').click(function(event){
+			//$(".point-notifications a div").hide();
+			//$(".point-notifications a").siblings("img").hide();
+		//});
+
+	</script>
 </body>
 </html>
