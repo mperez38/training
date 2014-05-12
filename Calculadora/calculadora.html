@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style-calc.css">
+	<title>Calculadora</title>
+</head>
+<body>
+	<div class="calc">
+		<div class="visor">
+			<textarea name="textarea"></textarea>
+		</div>
+		<div class="content">
+			<div class="line">
+				<div class="button number"><p>7</p></div>
+				<div class="button number"><p>8</p></div>
+				<div class="button number"><p>9</p></div>
+				<div class="button operator division"><p>/</p></div>
+			</div>
+			<div class="line">
+				<div class="button number"><p>4</p></div>
+				<div class="button number"><p>5</p></div>
+				<div class="button number"><p>6</p></div>
+				<div class="button operator multiplicacion"><p>*</p></div>
+			</div>
+			<div class="line">
+				<div class="button number"><p>1</p></div>
+				<div class="button number"><p>2</p></div>
+				<div class="button number"><p>3</p></div>
+				<div class="button operator resta"><p>-</p></div>
+			</div>
+			<div class="line">
+				<div class="button number"><p>.</p></div>
+				<div class="button number"><p>0</p></div>
+				<div class="button operator clear"><p>C</p></div>
+				<div class="button operator suma"><p>+</p></div>
+			</div>
+			<div class="line">
+				<div class="button negative"><p>Neg</p></div>
+				<div class="button equal"><p>=</p></div>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		
+		var firstOperand = "";
+		var secondOperand = "";
+		var operator = "";
+		var clear = "";
+
+		var activeOperand = function(){
+			return firstOperand;
+		}		
+
+		$(".number").click(function(event){			
+			$("textarea").val($("textarea").val()+ $(this).find("p").html());
+		});
+
+		$(".operator").click(function(event){
+			firstOperand = parseFloat($("textarea").val());
+			$("textarea").val("");
+			operator = $(this).find("p").html();
+		});
+
+		$(".equal").click(function(event){
+			secondOperand = parseFloat($("textarea").val());
+			if(operator == "*"){
+				$("textarea").val( firstOperand * secondOperand );
+			} else if(operator == "+"){
+				$("textarea").val( firstOperand + secondOperand );
+			} else if (operator == "/"){
+				$("textarea").val(firstOperand / secondOperand);
+			} else if(operator == "-"){
+				$("textarea").val(firstOperand - secondOperand);
+			}	
+		});
+		
+		$(".clear").click(function(event){
+			$(".textarea").val(clear);
+		});
+
+		$(".negative").click(function(event){
+			$("textarea").val("-");
+		});
+
+	</script>
+</body>
+</html>
