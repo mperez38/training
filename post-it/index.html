@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Postick</title>
+</head>
+<body>
+	<header>
+		<a id="new-post" href="">New</a>
+		<a id="clear-all" href="">Clear All</a>
+		<div class="lupa">
+			<input id="search" class="image-submit" type="image" src="images/lupa.png" alt="submit">
+		</div>
+		<div class="imput">
+			<input id="box-search" type="text" name="search" placeholder="Search">
+		</div>
+		<select name="projects" id="select-projects">
+			<option value="first">All projects</option>
+		</select>
+	</header>
+
+	<div class="content">
+		<div class="post hide">
+			<div class="button-close"><span id="span-close">x</span></div>
+			<span>Title post-it:</span>
+			<input type="text" id="addPostit" name="add-posting" placeholder="Add post title">
+			<span>text post-it:</span>
+			<textarea id="text-postick"></textarea>
+			<span>Name project:</span>
+			<input type="text" id="project" name="add-posting" placeholder="Name project">
+			<div class="button-add">
+				<p>Add your post</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="effect.js"></script>
+</body>
+</html>
