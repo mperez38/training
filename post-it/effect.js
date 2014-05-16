@@ -56,13 +56,20 @@ $(document).ready(function(){
 	$("#search").click(function(){
 		var searchTag = $("#box-search").val().trim();
 		var projectNameToSearch = $("#select-projects").find(":selected").text();
-		if( searchTag.length > 0 ){
+		if(projectNameToSearch != "All projects"){
+			if( searchTag.length > 0 ){
+				$(".posting").hide();
+				$(".posting[data-content*='"+searchTag+"']"+"[data-projects*='"+projectNameToSearch+"']").show();		
+			} else {
+				$(".posting").show();		
+			}	
+			$("#box-search").val("");
+		}else{
 			$(".posting").hide();
-			$(".posting[data-content*='"+searchTag+"']"+"[data-projects*='"+projectNameToSearch+"']").show();		
-		} else {
-			$(".posting").show();		
-		}	
-		$("#box-search").val("");
+			$(".posting[data-content*='"+searchTag+"']").show();
+			$("#box-search").val("");
+		}
+		
 	});
 
 	$("#clear-all").click(function(){
@@ -112,7 +119,6 @@ var closePost = function(){
 		items.splice(index, 1);
 		localStorage["items"] = JSON.stringify(items);		
 		
-
 		var stillExists = false;
 		$.each(items, function(index, item){
 			if( item.project ===  projectNameToDelete ){
