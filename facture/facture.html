@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles/global.css">
+	<title>Facture</title>
+</head>
+<body>
+	<div class="facture">
+		<div class="invoice-format">
+			<div class="form-left inline-block">
+				No: <input class="number-facture" type="text" name="number-facture"><br>
+				Description: <input id="description-facture" type="text" name="description-facture">
+			</div>
+			<div class="inline-block">
+				Date: <input class="date-facture" type="date" name="date-facture">
+			</div>
+		</div>
+		<hr>
+		<div class="content">
+			<div class="item-facture">
+				<div class="delete-item"><p>x</p></div>
+				<div class="item">
+					<div class="part-item">
+						<p >Description item:</p><input class="description-item" type="text" name="description-item">
+					</div>
+					<div class="part-item">	
+						<p>Amount:</p><input class="cant-item" type="number" name="description-item">
+					</div>
+					<div class="part-item">
+						<p>Unit price:</p><input class="precio-item" type="number" name="description-item">
+					</div>
+					<div class="part-item">
+						<p>Total:</p><input class="total-item" type="number" name="description-item">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-facture">
+			<div class="add-item"><p>+</p></div>
+			<div class="total-facture"><p>Total facture:</p><input id="total-facture" type="text" name="total-facture"></div>
+		</div>
+		
+	</div>
+
+	<script src="jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="script/global.js"></script>
+</body>
+</html>

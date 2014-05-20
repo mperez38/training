@@ -1,0 +1,120 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Regular.ttf'); /* IE9 Compat Modes */
+}
+
+body {
+	font-family: 'OpenSans';
+	padding:0px;
+	margin:0px;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.facture{
+	width: 649px;
+	padding: 20px;
+	background-color: #ccc ;
+	border: 1px solid black;
+	margin: 20px;
+}
+
+.form-left{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.form-left{
+	margin-right: 94px;
+}
+
+input{
+	width: 200px;
+}
+
+.number-facture{
+	margin-left: 66px;
+}
+
+.delete-item{
+	color: white;
+	background-color: red;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 20px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	margin-right: 30px;
+	cursor: pointer;
+	vertical-align: top;
+	margin-top: 9px;
+}
+
+.description-item{
+	width: 300px!important;
+	display: inline-block;
+}
+
+.part-item{
+	display: inline-block;
+}
+
+.item input{
+	width: 87px;
+}
+
+.footer-facture{
+	height: 38px;
+	padding-top: 20px;
+}
+
+.total-facture{
+	float: right;
+}
+
+.add-item{
+	float: left;
+	background-color: blue;
+	width: 60px;
+	height: 24px;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 7px;
+	cursor: pointer;
+}
+
+.add-item p{
+	color: white;
+	display: inline-block;
+	font-size: 25px;
+}
+
+.part-item p{
+	color: gray;
+	font-size: 10px;
+}
+
+.roll-input p{
+	margin-left: 4px;
+}
+
+.first-p{
+	margin-left: 0!important;
+}
+
+.roll-input input{
+	margin-left: 4px;
+}
+
+.roll-input .description-item{
+	margin-left: 0;
+}
