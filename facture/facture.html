@@ -7,13 +7,17 @@
 </head>
 <body>
 	<div class="facture">
+		<header>
+			<h1>BILL</h1>
+			<hr>
+		</header>
 		<div class="invoice-format">
 			<div class="form-left inline-block">
-				No: <input class="number-facture" type="text" name="number-facture"><br>
-				Description: <input id="description-facture" type="text" name="description-facture">
+				<span>No:</span><input class="number-facture" type="text" name="number-facture"><br>
+				<span>Description:</span> <input id="description-facture" type="text" name="description-facture">
 			</div>
-			<div class="inline-block">
-				Date: <input class="date-facture" type="date" name="date-facture">
+			<div class="inline-block date">
+				<span>Date:</span><input class="date-facture" type="date" name="date-facture">
 			</div>
 		</div>
 		<hr>
@@ -38,9 +42,9 @@
 		</div>
 		<div class="footer-facture">
 			<div class="add-item"><p>+</p></div>
+			<div class="save"><p>save</p></div>
 			<div class="total-facture"><p>Total facture:</p><input id="total-facture" type="text" name="total-facture"></div>
 		</div>
-		
 	</div>
 
 	<script src="jquery-1.11.1.js"></script>

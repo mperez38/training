@@ -12,6 +12,15 @@ body {
 	margin:0px;
 }
 
+header{
+	text-align: left;
+}
+
+header h1{
+	font-size: 40px;
+	color: #666666;
+}
+
 .inline-block{
 	display: inline-block;
 }
@@ -20,8 +29,12 @@ body {
 	width: 649px;
 	padding: 20px;
 	background-color: #ccc ;
-	border: 1px solid black;
+	border: 1px solid #666666;
 	margin: 20px;
+}
+
+.invoice-format span{
+	color: #666666;
 }
 
 .form-left{
@@ -38,14 +51,18 @@ input{
 }
 
 .number-facture{
-	margin-left: 66px;
+	margin-left: 70px;
+}
+
+.date-facture{
+	margin-left: 4px;
 }
 
 .delete-item{
 	color: white;
-	background-color: red;
+	background-color: #d11313;
 	border-radius: 5px;
-	border: 1px solid black;
+	border: 1px solid #b2b2b0;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -55,6 +72,10 @@ input{
 	cursor: pointer;
 	vertical-align: top;
 	margin-top: 9px;
+}
+
+.delete-item p{
+	margin: 0!important;
 }
 
 .description-item{
@@ -79,12 +100,12 @@ input{
 	float: right;
 }
 
-.add-item{
+.add-item, .save{
 	float: left;
-	background-color: blue;
+	background-color: #015c77;
 	width: 60px;
 	height: 24px;
-	border: 1px solid black;
+	border: 1px solid #b2b2b0;
 	border-radius: 5px;
 	text-align: center;
 	vertical-align: middle;
@@ -117,4 +138,15 @@ input{
 
 .roll-input .description-item{
 	margin-left: 0;
+}
+
+.save{
+	margin-left: 20px;
+}
+
+.save p{
+	color: white;
+	display: inline-block;
+	font-size: 18px;
+	vertical-align: middle;
 }
