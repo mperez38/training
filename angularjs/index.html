@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+  <head>
+  	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <title>Store of Gem in Angularjs</title>
+  </head>
+  <body class="container" ng-controller="StoreController as store">
+  	<header>
+      <h1 class="text-center">Flatlander Crafted Gems</h1>
+      <h2 class="text-center">– an Angular store –</h2>
+    </header>
+  	<div class="list-group">
+	    <div class="list-group-item" ng-repeat="product in store.products | limitTo: 10 | orderBy:'-price'" ng-hide="store.product.soldOut">
+	   		<h3>
+	   			{{product.name | uppercase}}
+	   			<em class="pull-right">{{product.price | currency }}</em>
+	   		</h3>
+
+	   		<div class="gallery" ng-show="product.images.length > 0">
+		        <div class="img-wrap">
+		          <img ng-src="{{product.images[0].full}}" />
+		        </div>
+		       <!--  <ul class="img-thumbnails clearfix">
+		          <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+		            <img ng-src="{{image}}"/>
+		          </li>
+		        </ul> -->
+		    </div>
+
+		    <section ng-controller="PanelController as panel">
+				<ul class="nav nav-pills">
+					<li ng-class="{active: panel.isSet(1)}">
+						<a href="" ng-click="panel.setTab(1)">Description</a>
+					</li>
+					<li ng-class="{active: panel.isSet(2)}">
+						<a href="" ng-click="panel.setTab(2)">Specifications</a>
+					</li>
+					<li ng-class="{active: panel.isSet(3)}">
+						<a href="" ng-click="panel.setTab(3)">Reviews</a>
+					</li>
+				</ul>
+				<div class="panel" ng-show="panel.isSet(1)">
+					<h4>Description</h4>
+					<blockquote>{{product.description}}</blockquote>
+				</div>
+				<div class="panel" ng-show="panel.isSet(2)">
+					<h4>Specifications</h4>
+					<blockquote>None yet</blockquote>
+				</div>
+				<div class="panel" ng-show="panel.isSet(3)">
+					<h4>Reviewa</h4>
+					<blockquote>None yet</blockquote>
+				</div>
+			</section>
+
+	   		<!-- <p>{{product.date | date: 'MM/dd/yyyy @ mma'}}</p> -->
+	    	<button ng-show="product.canPurchase">Add to Cart</button>
+	    </div>
+	</div>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
